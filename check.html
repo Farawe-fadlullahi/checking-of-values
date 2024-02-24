@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check</title>
+</head>
+<body>
+    <h2>input a value in the  first input then check if the value really exist in the second input</h2>
+    <input type="text" name="" id="first" placeholder="input a value">
+    <input type="text" name="" id="second" placeholder="check if d value of the first input exist here">
+    <button onclick="to_check()">check</button>
+    <h2 id="display"></h2>
+</body>
+</html>
+<script>
+    let first=document.getElementById('first')
+    let second=document.getElementById('second')
+    let display=document.getElementById('display')
+    function to_check() {
+        display.innerHTML=''
+        if (second.value.includes(first.value)) {
+            display.style.color='black'
+            display.innerHTML='found'
+        }else{
+            display.innerHTML='not found'
+            display.style.color='red'
+        }
+    }
+</script>
